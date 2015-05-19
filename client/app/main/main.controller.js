@@ -8,12 +8,10 @@ angular.module('nodersWebApp')
             latitude: -16.0,
             longitude: -70.0
         };
-
         $scope.map.zoom = 3;
         $http.get('/api/partners').success(function(partners) {
             $scope.partners = partners;
         });
-
         $http.get('/api/noders').success(function(noders) {
             $scope.noders = noders;
         });
@@ -38,11 +36,7 @@ angular.module('nodersWebApp')
         $scope.noderClicked = function(marker) {
             $scope.selectedMarker = null;
             $scope.selectedMarker = marker;
-        }
-
-
-
-
+        };
 
         $scope.map.options = {}
         $scope.map.options.styless = [{
